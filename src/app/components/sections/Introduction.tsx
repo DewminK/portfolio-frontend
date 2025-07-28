@@ -22,10 +22,10 @@ const Introduction: React.FC = () => {
   ];
 
   const socialLinks: SocialLink[] = [
-    { icon: 'github', href: '#', label: 'GitHub' },
-    { icon: 'linkedin', href: '#', label: 'LinkedIn' },
-    { icon: 'twitter', href: '#', label: 'Twitter' },
-    { icon: 'email', href: 'mailto:your.email@example.com', label: 'Email' }
+    { icon: 'github', href: 'https://github.com/DewminK', label: 'GitHub' },
+    { icon: 'linkedin', href: 'https://www.linkedin.com/in/dewmin-deniyegedara-a190b5165/', label: 'LinkedIn' },
+    { icon: 'medium', href: 'https://medium.com/@dewminkasmitha30', label: 'Medium' },
+    { icon: 'email', href: 'mailto:dewminkasmitha30@gmail.com', label: 'Email' }
   ];
 
   // Typewriter effect for roles
@@ -93,10 +93,10 @@ const Introduction: React.FC = () => {
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
           </svg>
         );
-      case 'twitter':
+      case 'medium':
         return (
           <svg className={iconClass} fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            <path d="M2.01 6.52a.5.5 0 00-.18-.46L.09 4.03V3.75h5.68l4.38 9.61 3.85-9.6h5.48v.28l-1.64 1.56a.33.33 0 00-.13.32v12.3a.33.33 0 00.13.32l1.6 1.56v.28h-8.18v-.28l1.66-1.61c.16-.16.16-.21.16-.32V8.61l-4.63 11.66h-.63L3.41 8.61v7.8c-.05.25.05.51.25.68l2.16 2.61v.28H.04v-.28l2.16-2.61a.74.74 0 00.23-.68V6.52z" />
           </svg>
         );
       case 'email':
@@ -148,10 +148,7 @@ const Introduction: React.FC = () => {
 
             {/* Description */}
             <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
-              A third-year undergraduate at Faculty of Information Technology, 
-              University of Moratuwa who has strong motivation toward full stack 
-              development and networking and cyber security fields. Also motivater and believer 
-              in team projects environments.
+              A third-year undergraduate at the Faculty of Information Technology, University of Moratuwa, with a strong passion for full-stack development, networking, and cybersecurity. Enthusiastic about working in collaborative team environments and always motivated to take on new challenges.
             </p>
 
             {/* Action buttons */}
@@ -224,7 +221,7 @@ const Introduction: React.FC = () => {
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gray-800/50 shadow-2xl hover:scale-105 transition-all duration-500 hover:shadow-cyan-500/30">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 z-10"></div>
                 <Image 
-                  src="/profile.jpg" 
+                  src="/profile.jpeg" 
                   alt="Dewmin Profile" 
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-700"
