@@ -12,9 +12,7 @@ interface Achievement {
   date: string;
   image: string;
   description: string;
-  category: string;
   credentialUrl?: string;
-  skills: string[];
 }
 
 interface Certification {
@@ -27,7 +25,6 @@ interface Certification {
   description: string;
   credentialId?: string;
   credentialUrl?: string;
-  skills: string[];
 }
 
 const Certifications: React.FC = () => {
@@ -36,72 +33,60 @@ const Certifications: React.FC = () => {
   const achievements: Achievement[] = [
     {
       id: 1,
-      title: "Dean's List Recognition",
-      organization: "University of Moratuwa",
-      date: "2023",
-      image: "/api/placeholder/300/200",
-      description: "Recognized for outstanding academic performance with GPA above 3.5, demonstrating excellence in Information Technology coursework and maintaining consistent high standards.",
-      category: "Academic Excellence",
-      skills: ["Academic Excellence", "Time Management", "Problem Solving", "Research"]
+      title: "J'pura Xtreme 2024 - 2nd Runners Up",
+      organization: "IEEE Student Branch of USJP",
+      date: "2024",
+      image: "/achievements/jpura.jpeg",
+      description: "Our team Creative Coders secured the 2nd runners up position in J'pura Xtreme 2024 amoung 100+ participants, a hackathon organized by the IEEE Student Branch of University of Sri Jayewardenepura, for solving algorithmic and data structure related challenges.",
     },
     {
       id: 2,
-      title: "Best Innovation Award",
-      organization: "IEEE Hackathon 2024",
-      date: "March 2024",
-      image: "/api/placeholder/300/200",
-      description: "Won first place in the national IEEE hackathon for developing an innovative IoT-based smart home security system with AI-powered threat detection capabilities.",
-      category: "Innovation",
-      credentialUrl: "https://ieee.org/certificates/innovation-2024",
-      skills: ["Innovation", "IoT", "AI/ML", "Team Leadership", "Problem Solving"]
+      title: "CodeRush 2025 - 6th Place",
+      organization: "INTECS - Faculty of Information Technology ,UoM",
+      date: "2025",
+      image: "/achievements/coderush1.jpeg",
+      description: "Secured 6th place in CodeRush 2025, a hackathon organized by INTECS, for solving algorithmic challenges and developing innovative solutions at the ideathon phase.",
     },
     {
       id: 3,
-      title: "Community Service Excellence",
-      organization: "Rotaract Club",
-      date: "December 2023",
-      image: "/api/placeholder/300/200",
-      description: "Awarded for outstanding community service contributions, leading multiple social impact projects and volunteer initiatives that benefited local communities.",
-      category: "Community Service",
-      skills: ["Leadership", "Community Engagement", "Project Management", "Social Impact"]
+      title: "Codex - Finalist",
+      organization: "Department of Computer Science and Engineering, UoM",
+      date: "2025",
+      image: "/achievements/codejam.jpeg",
+      description: "Secure the top 20 finalist position in Codex, a hackathon organized by the Department of Computer Science and Engineering, University of Moratuwa, for solving algorithmic problems and contributing open source projects while submitting the correct solutions.",
     }
   ];
 
   const certifications: Certification[] = [
     {
       id: 1,
-      title: "AWS Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      date: "January 2024",
-      expiryDate: "January 2027",
-      image: "/api/placeholder/300/200",
-      description: "Fundamental understanding of AWS Cloud concepts, services, security, architecture, pricing, and support. Demonstrates knowledge of cloud computing principles.",
-      credentialId: "AWS-CCP-2024-001",
-      credentialUrl: "https://aws.amazon.com/certification/verify",
-      skills: ["Cloud Computing", "AWS Services", "Security", "Architecture"]
+      title: "Connect and Protect: Networks and Network Security",
+      issuer: "Google",
+      date: "2024",
+      image: "/achievements/googleconnect.jpeg",
+      description: "Learned how data travels over a network using protocols like TCP/IP. It also covered how to protect networks from threats using firewalls, encryption, and intrusion detection. Lastly, I learned system hardening techniques like applying updates and disabling unnecessary services to improve security.",
+      credentialId: "No Direct Credential ID",
+      credentialUrl: "https://coursera.org/share/1e9c7e7ee873b22422f07b3bcf62b56e",
     },
     {
       id: 2,
-      title: "Microsoft Azure Fundamentals",
-      issuer: "Microsoft",
-      date: "November 2023",
-      expiryDate: "November 2026",
-      image: "/api/placeholder/300/200",
-      description: "Foundational knowledge of cloud services and how Microsoft Azure provides those services. Understanding of Azure pricing, support, and service level agreements.",
-      credentialId: "MS-AZ900-2023-456",
-      credentialUrl: "https://learn.microsoft.com/credentials",
-      skills: ["Azure Cloud", "Cloud Services", "Pricing Models", "SLA Management"]
+      title: "Network Basics",
+      issuer: "Cisco Networking Academy",
+      date: "2024",
+      image: "/achievements/cisconew.png",
+      description: "This badge confirms that I successfully completed the Cisco Networking Basics course and gained foundational knowledge in networking. I learned about network types, data transmission, network cabling, IP addressing, and how transport and application layers work. I also practiced building a home wireless network and completed up to 13 Cisco Packet Tracer activities.",
+      credentialId: "No Direct Credential ID",
+      credentialUrl: "https://www.credly.com/badges/99bf6573-2fff-4592-91e2-e65e7e9d147d/public_url",
     },
     {
       id: 3,
-      title: "Cybersecurity Essentials",
-      issuer: "Cisco Networking Academy",
-      date: "September 2023",
-      image: "/api/placeholder/300/200",
-      description: "Comprehensive understanding of cybersecurity principles, threat landscape, cryptography, and network security fundamentals for protecting digital assets.",
-      credentialId: "CISCO-CYBER-2023-789",
-      credentialUrl: "https://cisco.netacad.com/certificates",
-      skills: ["Cybersecurity", "Network Security", "Cryptography", "Threat Analysis"]
+      title: "SQL Intermediate",
+      issuer: "HackerRank",
+      date: "2024",
+      image: "/achievements/hr.png",
+      description: "Intermediate to advanced level understanding of SQL concepts and its usage in a real data environment.",
+      credentialId: "509CC9ABD777",
+      credentialUrl: "https://www.hackerrank.com/certificates/509cc9abd777",
     }
   ];
 
@@ -114,23 +99,12 @@ const Certifications: React.FC = () => {
     });
   }, []);
 
-  const getCategoryColor = (category: string): string => {
-    switch (category) {
-      case 'Academic Excellence': return 'from-green-500 to-emerald-500';
-      case 'Innovation': return 'from-purple-500 to-pink-500';
-      case 'Community Service': return 'from-blue-500 to-cyan-500';
-      default: return 'from-gray-500 to-gray-600';
-    }
-  };
-
-  const getCategoryIcon = (category: string): string => {
-    switch (category) {
-      case 'Academic Excellence': return '🎓';
-      case 'Innovation': return '💡';
-      case 'Community Service': return '🤝';
-      default: return '🏆';
-    }
-  };
+  // Refresh AOS animations when tab changes
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+  }, [activeTab]);
 
   const getValidityStatus = (expiryDate?: string): { status: string; color: string; icon: string } => {
     if (!expiryDate) return { status: 'Permanent', color: 'from-green-500 to-emerald-500', icon: '✓' };
@@ -153,13 +127,10 @@ const Certifications: React.FC = () => {
       {achievements.map((achievement, index) => (
         <div
           key={achievement.id}
-          className="group bg-gray-800/40 backdrop-blur-lg border border-gray-700/50 rounded-2xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative"
+          className="group bg-gray-800/40 backdrop-blur-lg border border-gray-700/50 rounded-2xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative flex flex-col"
           data-aos="fade-up"
           data-aos-delay={index * 200}
         >
-          {/* Background glow effect */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(achievement.category)} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-          
           {/* Image Section */}
           <div className="relative h-48 overflow-hidden">
             <Image
@@ -167,30 +138,21 @@ const Certifications: React.FC = () => {
               alt={achievement.title}
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-700"
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmvFmETaYdCUtGhGPvGFxgxP8AcPl/2MrqLYrwPCOAuUgKPzJRHe2/CvfJQ7jT/wBAQH8lUvw2l/wAABcnUNPb7bPbwIJCTKOAQAx7dZ5XELJ1b4gBfbP6aZBX0kqUvXf1CEDOWHl+SX3NaOx5U5HPaVJRk4nJ5RRmBHe3RfTXU0/wAOHFOUggdGhPAUU6YdH6mALLX1z/2Q=="
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
             
-            {/* Category Badge */}
-            <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(achievement.category)} text-white border border-white/20 backdrop-blur-sm`}>
-              <span className="flex items-center space-x-1">
-                <span>{getCategoryIcon(achievement.category)}</span>
-                <span>{achievement.category}</span>
-              </span>
-            </div>
-
             {/* Date Badge */}
             <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-gray-900/80 text-cyan-400 border border-cyan-500/30 backdrop-blur-sm">
               {achievement.date}
             </div>
-
-            {/* Achievement Icon */}
-            <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-2xl shadow-lg">
-              🏆
-            </div>
           </div>
 
           {/* Content Section */}
-          <div className="p-6 space-y-4 relative z-10">
+          <div className="p-6 space-y-4 relative z-10 flex-grow flex flex-col">
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                 {achievement.title}
@@ -203,28 +165,13 @@ const Certifications: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-gray-300 text-sm leading-relaxed line-clamp-4">
+            <p className="text-gray-300 text-sm leading-relaxed flex-grow">
               {achievement.description}
             </p>
 
-            {/* Skills */}
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-white">Skills Demonstrated:</h4>
-              <div className="flex flex-wrap gap-2">
-                {achievement.skills.map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className={`px-3 py-1 bg-gradient-to-r ${getCategoryColor(achievement.category)} bg-opacity-20 text-xs font-semibold rounded-full border border-cyan-500/30 text-cyan-400`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* View Credential Button */}
+            {/* View Credential Button - Always at bottom */}
             {achievement.credentialUrl && (
-              <div className="pt-2">
+              <div className="pt-2 mt-auto">
                 <a
                   href={achievement.credentialUrl}
                   target="_blank"
@@ -239,9 +186,6 @@ const Certifications: React.FC = () => {
               </div>
             )}
           </div>
-
-          {/* Animated corner accent */}
-          <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${getCategoryColor(achievement.category)} opacity-10 rounded-bl-3xl transform translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500`}></div>
         </div>
       ))}
     </div>
@@ -255,13 +199,10 @@ const Certifications: React.FC = () => {
         return (
           <div
             key={certification.id}
-            className="group bg-gray-800/40 backdrop-blur-lg border border-gray-700/50 rounded-2xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative"
+            className="group bg-gray-800/40 backdrop-blur-lg border border-gray-700/50 rounded-2xl overflow-hidden hover:bg-gray-800/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative flex flex-col"
             data-aos="fade-up"
             data-aos-delay={index * 200}
           >
-            {/* Background glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
-            
             {/* Image Section */}
             <div className="relative h-48 overflow-hidden">
               <Image
@@ -269,30 +210,21 @@ const Certifications: React.FC = () => {
                 alt={certification.title}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmvFmETaYdCUtGhGPvGFxgxP8AcPl/2MrqLYrwPCOAuUgKPzJRHe2/CvfJQ7jT/wBAQH8lUvw2l/wAABcnUNPb7bPbwIJCTKOAQAx7dZ5XELJ1b4gBfbP6aZBX0kqUvXf1CEDOWHl+SX3NaOx5U5HPaVJRk4nJ5RRmBHe3RfTXU0/wAOHFOUggdGhPAUU6YdH6mALLX1z/2Q=="
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
               
-              {/* Validity Status Badge */}
-              <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${validity.color} text-white border border-white/20 backdrop-blur-sm`}>
-                <span className="flex items-center space-x-1">
-                  <span>{validity.icon}</span>
-                  <span>{validity.status}</span>
-                </span>
-              </div>
-
               {/* Date Badge */}
               <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-gray-900/80 text-cyan-400 border border-cyan-500/30 backdrop-blur-sm">
                 {certification.date}
               </div>
-
-              {/* Certification Icon */}
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-2xl shadow-lg">
-                📜
-              </div>
             </div>
 
             {/* Content Section */}
-            <div className="p-6 space-y-4 relative z-10">
+            <div className="p-6 space-y-4 relative z-10 flex-grow flex flex-col">
               <div className="space-y-2">
                 <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                   {certification.title}
@@ -310,7 +242,7 @@ const Certifications: React.FC = () => {
                 )}
               </div>
 
-              <p className="text-gray-300 text-sm leading-relaxed line-clamp-4">
+              <p className="text-gray-300 text-sm leading-relaxed flex-grow">
                 {certification.description}
               </p>
 
@@ -318,30 +250,15 @@ const Certifications: React.FC = () => {
               {certification.expiryDate && (
                 <div className="text-xs text-gray-400 flex items-center space-x-2">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
                   </svg>
                   <span>Expires: {certification.expiryDate}</span>
                 </div>
               )}
 
-              {/* Skills */}
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold text-white">Skills Covered:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {certification.skills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-xs font-semibold rounded-full border border-cyan-500/30 text-cyan-400"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* View Credential Button */}
+              {/* View Credential Button - Always at bottom */}
               {certification.credentialUrl && (
-                <div className="pt-2">
+                <div className="pt-2 mt-auto">
                   <a
                     href={certification.credentialUrl}
                     target="_blank"
@@ -399,11 +316,7 @@ const Certifications: React.FC = () => {
               }`}
             >
               <span className="flex items-center space-x-2">
-                <span className="text-lg">🏆</span>
                 <span>Achievements</span>
-                <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs">
-                  {achievements.length}
-                </span>
               </span>
             </button>
             <button
@@ -415,11 +328,7 @@ const Certifications: React.FC = () => {
               }`}
             >
               <span className="flex items-center space-x-2">
-                <span className="text-lg">📜</span>
                 <span>Certifications</span>
-                <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs">
-                  {certifications.length}
-                </span>
               </span>
             </button>
           </div>
@@ -430,62 +339,19 @@ const Certifications: React.FC = () => {
           {activeTab === 'achievements' ? renderAchievements() : renderCertifications()}
         </div>
 
-        {/* Statistics Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="600">
-          <div className="text-center bg-gray-800/30 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">{achievements.length}</div>
-            <div className="text-gray-300 text-sm">Achievements</div>
-          </div>
-          <div className="text-center bg-gray-800/30 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/30 transition-all duration-300">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">{certifications.length}</div>
-            <div className="text-gray-300 text-sm">Certifications</div>
-          </div>
-          <div className="text-center bg-gray-800/30 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-green-500/30 transition-all duration-300">
-            <div className="text-3xl font-bold text-green-400 mb-2">
-              {certifications.filter(c => getValidityStatus(c.expiryDate).status === 'Valid').length}
-            </div>
-            <div className="text-gray-300 text-sm">Active Certs</div>
-          </div>
-          <div className="text-center bg-gray-800/30 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300">
-            <div className="text-3xl font-bold text-blue-400 mb-2">2024</div>
-            <div className="text-gray-300 text-sm">Latest Year</div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="800">
-          <div className="bg-gray-800/30 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 max-w-2xl mx-auto">
-            <div className="space-y-4">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold text-white">
-                Continuous{' '}
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                  Learning Journey
-                </span>
-              </h3>
-              <p className="text-gray-300 mb-6">
-                I'm always pursuing new certifications and achievements to stay current with emerging technologies and industry best practices.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-purple-500/25">
-                  <span className="flex items-center justify-center space-x-2">
-                    <span>View All Credentials</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </span>
-                </button>
-                <button className="group border-2 border-cyan-500 text-cyan-400 px-6 py-3 rounded-full font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <span>Contact for Verification</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
+          <a
+            href="https://www.linkedin.com/in/yourprofile" // Replace with your actual LinkedIn profile URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-purple-500/25 inline-flex items-center justify-center space-x-2"
+          >
+            <span>View All Certifications and Achievements</span>
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

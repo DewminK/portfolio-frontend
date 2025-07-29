@@ -12,7 +12,6 @@ interface Testimonial {
   company: string;
   image: string;
   testimonial: string;
-  rating: number;
   date: string;
   relationship: string;
   linkedin?: string;
@@ -22,15 +21,14 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Kasun Perera",
+      name: "Mr. Kasun Perera",
       position: "Senior Software Engineer",
       company: "Creative Software",
-      image: "/api/placeholder/100/100",
-      testimonial: "Dewmin is a leader that changes the way we approach software development. His innovative thinking and technical expertise have been instrumental in driving our team's success. He consistently delivers high-quality solutions and mentors junior developers with patience and clarity.",
-      rating: 5,
-      date: "March 2024",
-      relationship: "Direct Colleague",
-      linkedin: "https://linkedin.com/in/kasunperera"
+      image: "/testimonials/kasun.jpeg",
+      testimonial: "Dewmin had a good leadership in both project management and UI/UX design. His initiative, accountability, and clear understanding of his role were key in driving the team forward with minimal blockers. His leadership focused on implementation quality, and ability to guide the team collaboratively stood out and contributed significantly to the project’s overall success.",
+      date: "July 2025",
+      relationship: "Software Project Mentor",
+      linkedin: "https://www.linkedin.com/in/kasun-chathuranga-a8b062141/"
     }
   ];
 
@@ -43,18 +41,6 @@ const Testimonials: React.FC = () => {
     });
   }, []);
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <svg
-        key={index}
-        className={`w-5 h-5 ${index < rating ? 'text-yellow-400' : 'text-gray-600'}`}
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-      </svg>
-    ));
-  };
 
   return (
     <section id="testimonials" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -76,7 +62,7 @@ const Testimonials: React.FC = () => {
             </span>
           </h2>
           <p className="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto mb-12">
-            Testimonials from colleagues, mentors, and industry professionals who have worked with me
+            Testimonials from mentors, and industry professionals who have mentored me during projects
           </p>
         </div>
 
@@ -106,12 +92,6 @@ const Testimonials: React.FC = () => {
                       {testimonial.testimonial}
                     </p>
                   </div>
-
-                  {/* Rating */}
-                  <div className="flex items-center space-x-1">
-                    {renderStars(testimonial.rating)}
-                  </div>
-
                   {/* Author Info */}
                   <div className="flex items-center space-x-4 pt-4 border-t border-gray-700/50">
                     <div className="relative">
@@ -175,41 +155,7 @@ const Testimonials: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
-          <div className="bg-gray-800/30 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 max-w-2xl mx-auto">
-            <div className="space-y-4">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-2xl font-bold text-white">
-                Let's{' '}
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                  Work Together
-                </span>
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Interested in collaborating? I'd love to hear about your project and discuss how we can create something amazing together.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-purple-500/25">
-                  <span className="flex items-center justify-center space-x-2">
-                    <span>Get In Touch</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </span>
-                </button>
-                <button className="group border-2 border-cyan-500 text-cyan-400 px-6 py-3 rounded-full font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
-                  <span className="flex items-center justify-center space-x-2">
-                    <span>View LinkedIn</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

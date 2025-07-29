@@ -66,8 +66,7 @@ const Introduction: React.FC = () => {
   }, []);
 
   const handleResumeClick = (): void => {
-    // Add your resume download logic here
-    console.log('Download resume');
+     window.open('https://drive.google.com/file/d/1Jd1H5-0ylvTXYL2ESD-sWmMxJM61cJnr/view?usp=sharing', '_blank');
   };
 
   const handleProjectsClick = (): void => {
@@ -229,36 +228,6 @@ const Introduction: React.FC = () => {
                 />
                 {/* Overlay effects */}
                 <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-cyan-500/5 z-20"></div>
-              </div>
-
-              {/* Enhanced floating elements */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-cyan-500 to-blue-500 w-12 h-12 rounded-full animate-bounce flex items-center justify-center shadow-lg shadow-cyan-500/30">
-                <span className="text-white font-bold">💻</span>
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-purple-500 to-pink-500 w-10 h-10 rounded-full animate-bounce [animation-delay:500ms] flex items-center justify-center shadow-lg shadow-purple-500/30">
-                <span className="text-white font-bold">🚀</span>
-              </div>
-              <div className="absolute top-1/4 -left-10 bg-gradient-to-r from-green-400 to-cyan-400 w-8 h-8 rounded-full animate-ping flex items-center justify-center">
-                <span className="text-white text-sm">⚡</span>
-              </div>
-              <div className="absolute bottom-1/4 -right-8 bg-gradient-to-r from-yellow-400 to-orange-400 w-6 h-6 rounded-full animate-bounce [animation-delay:1s] flex items-center justify-center">
-                <span className="text-white text-xs">✨</span>
-              </div>
-
-              {/* Rotating tech icons */}
-              <div className="absolute inset-0 animate-spin [animation-duration:20s]">
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs">
-                  JS
-                </div>
-                <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
-                  ⚛️
-                </div>
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">
-                  🐍
-                </div>
-                <div className="absolute top-1/2 -left-8 transform -translate-y-1/2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
-                  ❤️
-                </div>
               </div>
             </div>
           </div>
