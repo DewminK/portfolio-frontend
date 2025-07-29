@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
                 
                 {/* Quote Icon */}
                 <div className="absolute top-6 left-6 text-6xl text-cyan-400/20 font-serif leading-none">
-                  "
+                  &quot;
                 </div>
                 
                 {/* Content */}

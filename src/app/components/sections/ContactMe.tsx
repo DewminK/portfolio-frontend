@@ -144,8 +144,9 @@ const ContactMe: React.FC = () => {
             </span>
           </h2>
           <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together.
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you. Let&apos;s create something amazing together.
           </p>
+
         </div>
 
         {/* Contact Form */}
@@ -273,7 +274,7 @@ const ContactMe: React.FC = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Success!</h3>
-                  <p className="text-gray-300 mb-6">Your message has been sent successfully. I'll get back to you soon!</p>
+                  <p className="text-gray-300 mb-6">Your message has been sent successfully. I&apos;ll get back to you soon!</p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
                     className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105"
