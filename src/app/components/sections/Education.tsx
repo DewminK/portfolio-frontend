@@ -52,7 +52,7 @@ const Education: React.FC = () => {
       title: "Bsc (Hons) in Information Technology",
       institution: "University of Moratuwa",
       period: "2023 - 2027",
-      description: "Currently 3rd year undergraduate in Information Technology at University of Moratuwa. Engaged in various projects and acadmeic activities in software development.",
+      description: "Currently 3rd year undergraduate in Faculty of Information Technology at University of Moratuwa. Engaged in various projects and acadmeic activities in software development.",
       grade: "CGPA: 3.76 / 4.00 (May 2025)",
       location: "Moratuwa, Sri Lanka",
       logoUrl: "/icons/uomlogo.jpg" // Replace with actual logo URL
