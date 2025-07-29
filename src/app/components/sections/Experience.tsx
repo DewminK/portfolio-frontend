@@ -34,7 +34,7 @@ const Experiences: React.FC = () => {
       organization: "IEEE Student Branch",
       period: "Term 24/25",
       location: "University of Moratuwa",
-      image: "/experience/ieee.jpg",
+      image: "/experience/ieeenew.jpg",
       description: "I was elected as a member of the events committee for the term 24/25 of the IEEE Student Branch of University of Moratuwa, where I have to contribute to organizing technical workshops and seminars.",
       skills: ["Event Management", "Team Coordination", "Public Speaking", "Networking"]
     },

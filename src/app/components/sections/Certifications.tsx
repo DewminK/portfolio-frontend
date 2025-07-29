@@ -49,7 +49,7 @@ const Certifications: React.FC = () => {
     },
     {
       id: 3,
-      title: "Codex - Finalist",
+      title: "CodeX - Finalist",
       organization: "Department of Computer Science and Engineering, UoM",
       date: "2025",
       image: "/achievements/codejam.jpeg",

@@ -388,6 +388,11 @@ const ContactMe: React.FC = () => {
                </a>
           </div>
         </div>
+        <div className="text-center mt-8 pt-8 border-t border-gray-700/30" data-aos="fade-up" data-aos-delay="800">
+          <p className="text-gray-400 text-sm">
+            Copyright © 2025 Dewmin Deniyegedara
+          </p>
+        </div>
       </div>
     </section>
   );

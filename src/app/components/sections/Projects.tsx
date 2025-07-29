@@ -160,7 +160,7 @@ const Projects: React.FC = () => {
     },
     {
       id: 4,
-      title: "Sell-X",
+      title: "FlagX",
       description: "A system for finding and searching for flagship smartphones with a user-friendly interface and advanced search features.",
       longDescription: "Sell-X is a comprehensive platform designed to help users find and purchase flagship smartphones with ease.",
       image: "/projects/flagx.jpeg",
