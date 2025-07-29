@@ -106,21 +106,6 @@ const Certifications: React.FC = () => {
     }, 100);
   }, [activeTab]);
 
-  const getValidityStatus = (expiryDate?: string): { status: string; color: string; icon: string } => {
-    if (!expiryDate) return { status: 'Permanent', color: 'from-green-500 to-emerald-500', icon: '✓' };
-    
-    const expiry = new Date(expiryDate);
-    const now = new Date();
-    const monthsUntilExpiry = (expiry.getTime() - now.getTime()) / (1000 * 3600 * 24 * 30);
-    
-    if (monthsUntilExpiry > 12) {
-      return { status: 'Valid', color: 'from-green-500 to-emerald-500', icon: '✓' };
-    } else if (monthsUntilExpiry > 3) {
-      return { status: 'Expiring Soon', color: 'from-yellow-500 to-orange-500', icon: '⚠️' };
-    } else {
-      return { status: 'Expired', color: 'from-red-500 to-pink-500', icon: '⏰' };
-    }
-  };
 
   const renderAchievements = () => (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -194,7 +179,7 @@ const Certifications: React.FC = () => {
   const renderCertifications = () => (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {certifications.map((certification, index) => {
-        const validity = getValidityStatus(certification.expiryDate);
+        
         
         return (
           <div
