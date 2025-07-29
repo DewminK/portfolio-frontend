@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Dewmin Portfolio',
-  description: 'My personal portfolio site',
+  description: 'My Personal Portfolio Site',
 };
 
 export default function RootLayout({
@@ -12,6 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className="bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen">
         {children}
       </body>
