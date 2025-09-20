@@ -66,7 +66,7 @@ const Introduction: React.FC = () => {
   }, []);
 
   const handleResumeClick = (): void => {
-     window.open('https://drive.google.com/file/d/1OS8Hd1yWp0HoabGqHhr6yqDNeFrLWV7X/view?usp=drive_link', '_blank');
+     window.open('https://drive.google.com/file/d/1u-5XLdKfpTjZkOXaJIxgij74xpFAWsli/view?usp=drive_link', '_blank');
   };
 
   const handleProjectsClick = (): void => {

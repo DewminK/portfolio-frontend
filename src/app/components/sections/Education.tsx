@@ -53,7 +53,7 @@ const Education: React.FC = () => {
       institution: "University of Moratuwa",
       period: "2023 - 2027",
       description: "Currently 3rd year undergraduate in Faculty of Information Technology at University of Moratuwa. Engaged in various projects and acadmeic activities in software development.",
-      grade: "CGPA: 3.76 / 4.00 (May 2025) - Dean's List in 2 Semesters",
+      grade: "CGPA: 3.80 / 4.00 (Sep 2025) - Dean's List in 3 Semesters",
       location: "Moratuwa, Sri Lanka",
       logoUrl: "/icons/uomlogo.jpg" 
     }
